@@ -95,7 +95,18 @@ export class ArgoCDServer {
   }
 
   async getAppCollection(): Promise<AppCollection> {
-    let responseJson = await this.api('v1/applications');
+    const fields = [
+      'items.metadata.name',
+      'items.spec.source.path',
+      'items.spec.source.repoURL',
+      'items.spec.source.targetRevision',
+      'items.spec.source.helm',
+      'items.spec.source.kustomize',
+      'items.status.sync.status'
+    ];
+
+    let responseJson = await this.api('v1/applications', [`fields=${fields.join(',')}`]);
+    core.warning(responseJson.items);
     return new AppCollection(responseJson.items);
   }
 
@@ -137,6 +148,7 @@ export class ArgoCDServer {
 
   async getAppCollectionDiffs(appCollectionDiffPromises: Promise<Diff>[]): Promise<Diff[]> {
     const diffs: Diff[] = [];
+    core.warning('Getting app collection diffs');
 
     let results = (await Promise.allSettled(appCollectionDiffPromises)).filter(
       result => result.status === 'fulfilled'
