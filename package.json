@@ -1,6 +1,6 @@
 {
   "name": "argocd-diff-action",
-  "version": "0.1.1",
+  "version": "0.1.13",
   "private": true,
   "description": "ArgoCD Diff GitHub Action",
   "main": "src/main.ts",
@@ -37,27 +37,27 @@
     "node-fetch": "^2.6.9"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.7",
+    "@semantic-release/github": "^8.1.0",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jest": "^28.1.8",
-    "@types/sinon": "^10.0.13",
+    "@types/sinon": "^10.0.15",
     "@vercel/ncc": "^0.36.1",
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.36.0",
-    "eslint-plugin-github": "^4.6.1",
+    "eslint": "^8.42.0",
+    "eslint-plugin-github": "^4.8.0",
     "eslint-plugin-jest": "^27.2.1",
     "fetch-mock-jest": "^1.5.1",
     "jest": "^28.1.3",
     "jest-circus": "^29.5.0",
     "js-yaml": "^4.1.0",
     "pre-commit": "^1.2.2",
-    "prettier": "^2.8.4",
-    "semantic-release": "^20.1.1",
-    "sinon": "^15.0.2",
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.2",
+    "sinon": "^15.1.2",
     "ts-jest": "^28.0.8",
-    "typescript": "^5.0.2"
+    "typescript": "^5.1.3"
   }
 }
